@@ -17,14 +17,14 @@ void initBlocks() {
 void checkBlocks() {
   for (int i = 0; i < block.length ; i++) {
     if (block[i] > 0) {
-      int ret = blockHitCheck(i*bw,40,bw,bh,x,y,b_w,b_h,dx,dy);
-      if (ret > 0) {
-        if (ret == 1) {
+      int ret_block = blockHitCheck(i*bw,40,bw,bh,x,y,b_w,b_h,dx,dy);
+      if (ret_block > 0) {
+        if (ret_block == 1) {
           dx = -dx;
-        } else if (ret == 2) {
+        } else if (ret_block == 2) {
           dy = -dy;
           block[i]--;
-        } else if (ret == 3) {
+        } else if (ret_block == 3) {
           dx = -dx;
           dy = -dy;
           block[i]--;
@@ -43,16 +43,16 @@ void showBlocks() {
     if (block[i] > 0) {
       
       if (block[i]== 3 ){
-       rect(i * bw, 40, bw, bh); // ブロックの描画
-       image(kumoikari,i * bw, 40, bw, bh);
+       //rect(i * bw, 40, bw, bh); // ブロックの描画
+       image(cloud3,i * bw, 40, bw, bh);
       }
       if (block[i] == 2){
-        rect(i * bw, 40, bw-30, bh);
-        image(kumohutuu,i * bw, 40, bw-20, bh);
+        //rect(i * bw, 40, bw-30, bh);
+        image(cloud2,i * bw, 40, bw-20, bh);
       }
       if (block[i]== 1){
-        rect(i * bw, 40, bw-50, bh);
-        image(kumokanasimi,i * bw, 40, bw-30, bh);
+        //rect(i * bw, 40, bw-50, bh);
+        image(cloud1,i * bw, 40, bw-30, bh);
       }
       text(block[i], i * bw, bh-20); // ブロックごとの余命を表示
     }

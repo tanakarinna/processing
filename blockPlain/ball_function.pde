@@ -4,6 +4,6 @@
 void initBall() {
   x = 100;
   y = 200;
-  dx = 1;
-  dy = 2;
+  dx = 30;
+  dy = 30;
 }

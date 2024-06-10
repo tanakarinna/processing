@@ -5,8 +5,8 @@ float thunder_dx, thunder_dy; // 雷の移動速度
 void initThunder() {
   thunder_x = 100;
   thunder_y = 200;
-  thunder_dx = 0;
-  thunder_dy = 10;
+  thunder_dx = 5;
+  thunder_dy = 0;
 }//雷アイテムの位置と速度を初期化
 
 void showThunders () {
@@ -24,10 +24,10 @@ void showRainbows () {
 }
 
 void initRainbow () {
-  rainbow_x = 400;
+  rainbow_x = 0;
   rainbow_y = 200;
-  rainbow_dx = 0;
-  rainbow_dy = 10;
+  rainbow_dx = 5;
+  rainbow_dy = 0;
 } //虹アイテムの位置と速度を初期化
 
 
@@ -42,8 +42,8 @@ void showSnows () {
 void initSnow() {
   snow_x = 300;
   snow_y = 200;
-  snow_dx = 0;
-  snow_dy = 10;
+  snow_dx = 10;
+  snow_dy = 0;
 }//雪アイテムの位置と速度を初期化
 
 
@@ -58,8 +58,8 @@ void showMoons () {
 void initMoon() {
   moon_x = 500;
   moon_y = 200;
-  moon_dx = 0;
-  moon_dy = 10;
+  moon_dx = 10;
+  moon_dy = 0;
 }//月アイテムの位置と速度を初期化
 
 float shootingstar_x =30, shootingstar_y = 900; //流れ星の左上の座標

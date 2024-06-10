@@ -17,16 +17,19 @@ void initBlocks() {
 void checkBlocks() {
   for (int i = 0; i < block.length ; i++) {
     if (block[i] > 0) {
-      int ret_block = blockHitCheck(i*bw,40,bw,bh,x,y,b_w,b_h,dx,dy);
+      int ret_block = blockHitCheck(i*bw,40,bw,bh,b_x,b_y,b_w,b_h,b_dx,b_dy);
       if (ret_block > 0) {
         if (ret_block == 1) {
-          dx = -dx;
+          ballStatus = 0;
+          //b_dx = -b_dx;
         } else if (ret_block == 2) {
-          dy = -dy;
+           ballStatus = 0;
+          //b_dy = -b_dy;
           block[i]--;
         } else if (ret_block == 3) {
-          dx = -dx;
-          dy = -dy;
+          ballStatus = 0;
+          //b_dx = -b_dx;
+          //b_dy = -b_dy;
           block[i]--;
         }
         return;

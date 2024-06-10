@@ -3,7 +3,7 @@ float thunder_w = 50, thunder_h = 50; // 雷の幅と高さ
 float thunder_dx, thunder_dy; // 雷の移動速度
 
 void initThunder() {
-  thunder_x = 100;
+  thunder_x = 0;
   thunder_y = 200;
   thunder_dx = 5;
   thunder_dy = 0;
@@ -25,7 +25,7 @@ void showRainbows () {
 
 void initRainbow () {
   rainbow_x = 0;
-  rainbow_y = 200;
+  rainbow_y = 300;
   rainbow_dx = 5;
   rainbow_dy = 0;
 } //虹アイテムの位置と速度を初期化
@@ -40,9 +40,9 @@ void showSnows () {
   }
 
 void initSnow() {
-  snow_x = 300;
-  snow_y = 200;
-  snow_dx = 10;
+  snow_x = 0;
+  snow_y = 400;
+  snow_dx = 5;
   snow_dy = 0;
 }//雪アイテムの位置と速度を初期化
 
@@ -56,9 +56,9 @@ void showMoons () {
   }
 
 void initMoon() {
-  moon_x = 500;
-  moon_y = 200;
-  moon_dx = 10;
+  moon_x = 0;
+  moon_y = 500;
+  moon_dx = 5;
   moon_dy = 0;
 }//月アイテムの位置と速度を初期化
 

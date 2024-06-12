@@ -44,7 +44,7 @@ void game_scene() {
   moveBlocks();//ブロックを上下に動かす
   checkBlocks(); // ブロックによるボールの跳ね返り処理
   showBlocks(); //　命が残っているブロックを表示する
-
+  
   if (thunderCount > 0) {
     showThunders ();//命が残っている雷アイテムを表示する
   }
@@ -62,6 +62,10 @@ void game_scene() {
   }
 
 
+
+  thunder_x += thunder_dx;
+  thunder_y += thunder_dy;
+
   checkAndShowRacket(height-80); // ラケットの表示とボールの打ち返し処理
   //image(teruterubouzu, r_x +20, height-80,r_w,r_h);//てるてる坊主の位置と大きさ
   showRacket();
@@ -72,7 +76,7 @@ void game_scene() {
   textSize(100);
   text(limitTime/1000, width/2, height/2);
 
-
+  
 
   //if (b_y + b_h >= height) { // ボールをラケットで受け損ねたらゲームを初期化する
   //  initBall();
@@ -87,6 +91,9 @@ void game_scene() {
   //} //　ボールが上部の壁に当たったら跳ね返る
 
   if (gameTime/1000 > 30 || racketLife == 0 || checkBlockDeleted()==false ) {
+    for(int i = 0; i < block.length ; i++){
+      score = score + block[i];
+    }
     scene = 3;
   }
 }
@@ -96,7 +103,21 @@ void start_scene() {
 }
 
 void result_scene() {
-  image(result1, 0, 0, width, height);
+  if(score >= 0 && score <6){
+    image(result5, 0, 0, width, height);
+  }
+  if(score >= 6 && score <11){
+    image(result4, 0, 0, width, height);
+  }
+  if(score >= 11 && score <16){
+    image(result3, 0, 0, width, height);
+  }
+  if(score >= 16 && score <21){
+    image(result2, 0, 0, width, height);
+  }
+  if(score >= 21 ){
+    image(result1, 0, 0, width, height);
+  }
 }
 
 

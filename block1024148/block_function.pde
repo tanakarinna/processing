@@ -1,5 +1,5 @@
-float bw; 
-float bh = 70;
+float bw; //ブロックの幅
+float bh = 70;//ブロックの高さ
 int block[] = new int[10]; // 10個のブロックの余命カウンター
 float [] blockDirection = new float[10];//各ブロックの移動方向の保持
 float [] blockY = new float [10]; //各ブロックのY座標を保持

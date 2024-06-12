@@ -8,6 +8,12 @@ void initBall() {
   b_dy = 0;
 }
 
+/*
+ ballSatatusが１の時ボールが動き、ボールが画面の外に出た場合はballStatusを0にする。
+ ballStatusが0の時ボールをラケットの位置にする。
+ */
+
+
 
 void sunShot () {
  if(ballStatus == 1){
@@ -16,9 +22,10 @@ void sunShot () {
    b_y += b_dy;
    if(b_y < 0){
     ballStatus = 0;
-    b_x = r_x + r_w/2;
-    b_y = r_y -b_h;
-    }//ボールが画面の外に出た場合
+    //initBall();
+    //b_x = r_x + r_w/2;
+    //b_y = r_y -b_h;
+    }
   }
   if(ballStatus == 0){
    b_x = r_x + r_w/2;
